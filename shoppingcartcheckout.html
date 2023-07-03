@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Anicafe - Shopping Cart</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<style></style>
+		<script src="booking.js"></script>
+	</head>
+	<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ps-3">
+			<div class="container-fluid pe-5">
+				<div class="navbar-header">
+					<a class="navbar-brand col-8" href="#homepage" style="-webkit-text-stroke: .5px red"><h1>Anicafe</h1></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNav">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div id="collapseNav" class="collapse navbar-collapse col-5 h4">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="#" style="-webkit-text-stroke: .5px yellow">Contact Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="#" style="-webkit-text-stroke: .5px lightgreen">Our Team</a></li>
+						<li class="nav-item"><a class="nav-link" href="#" style="-webkit-text-stroke: .5px cyan">Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="#" style="-webkit-text-stroke: .5px violet">Book a Table</a></li>
+						<li class="nav-item"><a class="nav-link" href="#" style="-webkit-text-stroke: .5px violet">Book a Room</a></li>
+						<li class="nav-item"><a class="nav-link" href="#" style="-webkit-text-stroke: .5px violet">Order Online</a></li>
+						<li class="nav-item"><a class="nav-link" href="#" style="-webkit-text-stroke: .5px violet">Shop For Merch</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+			<form action="">
+				<div class="row">
+					<div class="col">
+						<h2>Shopping Cart</h2>
+						<table id="cart" class="table table-hover table-bordered">
+							<thead><tr>
+								<th>Icon</th>
+								<th>Item Name</th>
+								<th>Quantity</th>
+								<th>Price</th>
+								<th>Delete</th>
+							</tr></thead>
+							<tbody>
+								<tr>
+									<td><img src="" alt="item1 icon"/></td>
+									<td>Item #1</td>
+									<td>1</td>
+									<td>$10.00</td>
+									<td><button class="btn btn-warning col">X</button></td>
+								</tr>
+								<tr>
+									<td><img src="" alt="item2 icon"/></td>
+									<td>Item #2</td>
+									<td>2</td>
+									<td>$15.00</td>
+									<td><button class="btn btn-warning col">X</button></td>
+								</tr>
+								<tr>
+									<td><img src="" alt="item3 icon"/></td>
+									<td>Item #3</td>
+									<td>1</td>
+									<td>$5.00</td>
+									<td><button class="btn btn-warning col">X</button></td>
+								</tr>
+							</tbody>
+						</table>
+						<h3>Menu Item Options</h3>
+						<label for="ordertime">Date and Time of Order:</label>
+						<input type="datetime-local" id="ordertime" name="ordertime"/>
+						<input type="radio" id="mpickup" name="ordertype" value="0"/>
+						<label for="mpickup">Pickup</label>
+						<input type="radio" id="mdelivery" name="ordertype" value="1"/>
+						<label for="mdelivery">Delivery</label>
+						<h3>Merchandise Options</h3>
+						<input type="radio" id="express" name="ordertype" value="0"/>
+						<label for="express">Express Delivery</label>
+						<input type="radio" id="regular" name="ordertype" value="1"/>
+						<label for="regular">Regular Delivery</label>
+						<input type="radio" id="slow" name="ordertype" value="2"/>
+						<label for="slow">Slow Delivery</label>
+						<input type="radio" id="pickup" name="ordertype" value="3"/>
+						<label for="pickup">Pickup</label>
+						<h2>Personal Info</h2>
+						<div class="input-group mb-3 mt-3">
+							<span class="input-group-text">Name:</span>
+							<input type="text" class="form-control" placeholder="First Name" required>
+							<input type="text" class="form-control" placeholder="Last Name" required>
+						</div>
+						<div class="mb-3">
+							<label for="address" class="form-label">Your Address:</label>
+							<input type="text" class="form-control" id="address" placeholder="Unit# - Street Address, City, Province, Country" name="address"/>
+						</div>
+						<div class="mb-3">
+							<label for="postalc" class="form-label">Postal Code:</label>
+							<input type="text" class="form-control" id="postalc" placeholder="Postal Code" name="postalcode"/>
+						</div>
+						<div class="input-group">
+							<span class="input-group-text">Store Location:</span>
+							<select class="form-select">
+								<option>Location 1</option>
+								<option>Location 2</option>
+								<option>Location 3</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="email" class="form-label">Email:</label>
+							<input type="email" class="form-control" id="email" placeholder="email@example.com" name="email" required>
+						</div>
+						<div class="mb-3">
+							<label for="phone" class="form-label">Phone Number:</label>
+							<input type="phone" class="form-control" id="phone" placeholder="(777) 777-7777" name="phone" required>
+						</div>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Number of guests" required>
+							<span class="input-group-text">Preferred Contact Method:</span>
+							<select class="form-select">
+								<option>Email</option>
+								<option>Phonecall</option>
+								<option>Text</option>
+							</select>
+						</div>
+					</div>
+					<div class="col">
+						<h2>Payment</h2>
+						<select class="form-select">
+							<option>Debit</option>
+							<option>Credit</option>
+						</select>
+						<div class="mb-3">
+							<label for="cardholder" class="form-label">Cardholder:</label>
+							<input type="text" class="form-control" id="cardholder" placeholder="Full Name" name="cardholder" required>
+						</div>
+						<div class="mb-3">
+							<label for="cardnum" class="form-label">Card Number:</label>
+							<input type="text" class="form-control" id="cardnum" placeholder="1234567890123456" name="cardnum" required>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="cardcv" class="form-label">CV:</label>
+								<input type="text" class="form-control" id="cardcv" placeholder="000" name="cardcv" required>
+							</div>
+							<div class="col">
+								<label for="cardexp" class="form-label">EXP:</label>
+								<input type="text" class="form-control" id="cardexp" placeholder="MM/YY" name="cardexp" required>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
